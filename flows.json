@@ -1,0 +1,54 @@
+[
+    {
+        "id": "c578af3c808e5661",
+        "type": "mqtt in",
+        "z": "4d778917bda52247",
+        "name": "",
+        "topic": "JupagomA/f/DO2",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "12dbce035b7ab054",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 340,
+        "y": 300,
+        "wires": [
+            [
+                "5882228aba515c3e"
+            ]
+        ]
+    },
+    {
+        "id": "12dbce035b7ab054",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "io.adafruit.com",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    }
+]
