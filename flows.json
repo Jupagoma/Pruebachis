@@ -1,5 +1,44 @@
 [
     {
+        "id": "561d70cac41e53c0",
+        "type": "mqtt out",
+        "z": "4d778917bda52247",
+        "name": "",
+        "topic": "JupagomA/f/DO2",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "12dbce035b7ab054",
+        "x": 510,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "5882228aba515c3e",
+        "type": "ui_text",
+        "z": "4d778917bda52247",
+        "group": "3b4ec883e023ce73",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "text",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 570,
+        "y": 300,
+        "wires": []
+    },
+    {
         "id": "c578af3c808e5661",
         "type": "mqtt in",
         "z": "4d778917bda52247",
@@ -12,7 +51,7 @@
         "rap": true,
         "rh": 0,
         "inputs": 0,
-        "x": 340,
+        "x": 180,
         "y": 300,
         "wires": [
             [
@@ -21,14 +60,111 @@
         ]
     },
     {
+        "id": "32579d0b50e91997",
+        "type": "ui_switch",
+        "z": "4d778917bda52247",
+        "name": "",
+        "label": "switch",
+        "tooltip": "",
+        "group": "3b4ec883e023ce73",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "str",
+        "style": "",
+        "onvalue": "true",
+        "onvalueType": "bool",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "false",
+        "offvalueType": "bool",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 310,
+        "y": 360,
+        "wires": [
+            [
+                "561d70cac41e53c0"
+            ]
+        ]
+    },
+    {
+        "id": "fb41eb877c87be53",
+        "type": "ui_dropdown",
+        "z": "4d778917bda52247",
+        "name": "",
+        "label": "ADF",
+        "tooltip": "ASDF",
+        "place": "Select option",
+        "group": "3b4ec883e023ce73",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "1",
+                "value": "A",
+                "type": "str"
+            },
+            {
+                "label": "2",
+                "value": "B",
+                "type": "str"
+            },
+            {
+                "label": "3",
+                "value": "C",
+                "type": "str"
+            },
+            {
+                "label": "4",
+                "value": "D",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 290,
+        "y": 420,
+        "wires": [
+            [
+                "561d70cac41e53c0"
+            ]
+        ]
+    },
+    {
+        "id": "4583d37803397a91",
+        "type": "remote-access",
+        "z": "4d778917bda52247",
+        "confignode": "a43720994759d718",
+        "name": "PRUEBA",
+        "verbose": 0,
+        "x": 480,
+        "y": 480,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
         "id": "12dbce035b7ab054",
         "type": "mqtt-broker",
         "name": "",
-        "broker": "io.adafruit.com",
-        "port": 1883,
+        "broker": "o513e7b6.ala.us-east-1.emqxsl.com",
+        "port": "8883",
+        "tls": "45b464d4f6d3aec4",
         "clientid": "",
         "autoConnect": true,
-        "usetls": false,
+        "usetls": true,
         "protocolVersion": 4,
         "keepalive": 60,
         "cleansession": true,
@@ -50,5 +186,50 @@
         "willMsg": {},
         "userProps": "",
         "sessionExpiry": ""
+    },
+    {
+        "id": "3b4ec883e023ce73",
+        "type": "ui_group",
+        "name": "D2",
+        "tab": "14b9d267885b95d8",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "a43720994759d718",
+        "type": "remote-config",
+        "name": "Node-RED UI",
+        "host": "192.168.1.8",
+        "protocol": "http",
+        "port": "1880",
+        "baseurl": "/ui",
+        "instancehash": "0fxzxeztb2ihd21mf6p4wi8wbyl2v4xvsdeyko5qvxtgeil3xd4wew9mql25t2lg",
+        "server": "nodered03.remote-red.com",
+        "region": "us"
+    },
+    {
+        "id": "45b464d4f6d3aec4",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "",
+        "caname": "emqxsl-ca.crt",
+        "servername": "",
+        "verifyservercert": true,
+        "alpnprotocol": ""
+    },
+    {
+        "id": "14b9d267885b95d8",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
     }
 ]
